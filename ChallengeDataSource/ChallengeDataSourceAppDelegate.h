@@ -8,8 +8,16 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface ChallengeDataSourceAppDelegate : NSObject <NSApplicationDelegate>
+@interface ChallengeDataSourceAppDelegate : NSObject <NSApplicationDelegate> {
+    NSMutableArray *_tasks;
+}
 
 @property (assign) IBOutlet NSWindow *window;
+@property (weak) IBOutlet NSTextField *task;
+@property (weak) IBOutlet NSTableView *tableView;
+
+
+
+- (IBAction)addTask:(id)sender;
 
 @end
